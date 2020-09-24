@@ -15,7 +15,7 @@ class App extends Component{
         <hr/>
         <User 
           name = 'Ilahiya'
-          company = 'ARP DIA'
+          company = ''
           salary = "2500"
         />
         <br/>

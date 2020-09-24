@@ -1,9 +1,26 @@
 import React, {Component} from 'react';
-import User from './components/User';
 import './App.css';
+import Users from './components/Users';
 import Navbar from './components/Navbar';
 
 class App extends Component{
+  state = {
+    users: [
+      {
+        id: 1,
+        name:   'Ilahiya',
+        company:'ARIS',
+        salary: '2500',
+
+      },
+      {
+        id:2,
+        name:   'Sevinc',
+        company:'DIA',
+        salary: '1000',
+      }
+    ]
+  }
 
   render(){
   
@@ -13,16 +30,7 @@ class App extends Component{
         title = "User App"
         />
         <hr/>
-        <User 
-          name = 'Ilahiya'
-          company = ''
-          salary = "2500"
-        />
-        <br/>
-        <User 
-          name = 'Ilahiya'
-          salary = "2500"
-        />
+        <Users users = {this.state.users}/>
       </div>
     );
     }
